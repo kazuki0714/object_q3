@@ -1,13 +1,15 @@
 # ferrari car
 class Ferrari < Car
   def initialize
+    (50..rand(200)).each do
     @type = 'フェラーリ'
     @capacity = 2
     @price = 2_000+rand(2_000)
     @speed = 100
     @height = 100
     @@total_price += price
-    @@total_count = 1+rand(20)
+    @@total_count += 1
+    end
   end
 
   def lift_up(car)
